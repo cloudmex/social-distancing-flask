@@ -1,8 +1,6 @@
+This repo acts as open source python implementation to the demo porposed by landingAI
 
-
-this repo acts as open source python implementation to the demo porposed by landingAI
-
-By some cause other repos about this has been deleted, we do not own the rights about trained model, any right issues send us an email: hola@cloudmex.io
+By some cause other repos about this has been deleted, we do not own any rights about original project, any right issues send us an email: hola@cloudmex.io
 
 ## New stuffs around this
 We have added an flask web server for visualize results on real time.
