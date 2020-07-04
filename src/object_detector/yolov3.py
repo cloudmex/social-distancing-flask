@@ -3,7 +3,19 @@ import time
 import itertools
 import cv2
 import numpy as np
+import boto3
+import os
 
+bucket = 'socialdistancing-model'
+s3client = boto3.client('s3')
+
+if not os.path.exists('yolo_weights'):
+    os.mkdir("yolo_weights")
+    os.chdir("yolo_weights")
+    s3client.download_file(bucket, 'yolo_weights/yolov3.cfg', os.path.join(os.curdir, os.path.basename('/yolo_weights/yolov3.cfg')))
+    s3client.download_file(bucket, 'yolo_weights/yolov3.weights', os.path.join(os.curdir, os.path.basename('/yolo_weights/yolov3.weights')))
+    s3client.download_file(bucket, 'yolo_weights/coco.names', os.path.join(os.curdir, os.path.basename('/yolo_weights/coco.names')))
+    os.chdir("..")
 
 class PeopleDetector:
     def __init__(self, yolocfg='yolo_weights/yolov3.cfg',

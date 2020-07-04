@@ -1,7 +1,7 @@
 # main.py
 # import the necessary packages
 from flask import Flask, render_template, Response
-from camera import SDCamera
+from .camera import SDCamera
 app = Flask(__name__)
 @app.route('/')
 def index():
@@ -19,4 +19,4 @@ def video_feed():
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 if __name__ == '__main__':
     # defining server ip address and port
-    app.run(host='0.0.0.0',port='5000', debug=True)
+    app.run(host='127.0.0.1',port='8000', debug=True)

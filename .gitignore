@@ -8,6 +8,11 @@
 # Mac/OSX
 .DS_Store
 
+#AWS crap
+.ebextensions
+.elasticbeanstalk
+.ebignore
+
 # Windows
 Thumbs.db
 
@@ -86,7 +91,6 @@ target/
 
 #yolov weights
 yolo_weights/
-yolo_out_py.avigit
 yolo_out_py.avi
 
 # Jupyter Notebook
@@ -128,3 +132,8 @@ venv.bak/
 .mypy_cache/
 .dmypy.json
 dmypy.json
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
